@@ -30,7 +30,7 @@ int main()
     server_addr.sin_port = htons(SERVER_PORT);
 
     // bind the socket
-    if (bind(server_sock, (struct sockaddr*)&server_addr, sizeof(server_addr) < 0))
+    if (bind(server_sock, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0)
     {
         std::cout << "server bind socket failed" << std::endl;
 	return -1;

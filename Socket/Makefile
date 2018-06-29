@@ -9,7 +9,7 @@ $(TARGET):$(OBJS)
 	$(CC) -o $(TARGET) $(OBJS) $(CFLAGS) $(LIBS)
 
 $(OBJS):%o:%cpp
-	$(CC) -c $(CFLAGS) $(LIBS) $< -o $@
+	$(CC) -c $(CFLAGS) $< -o $@
 
 # clean environment
 clean:

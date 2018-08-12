@@ -7,5 +7,7 @@ int myPrint2()
 	std::cout << "This is my_print_1(), " << "AspectRatio = " << AspectRatio << std::endl;
 	std::cout << "This is my_print_1(), " << "AspectRatio^3 = " << my_cube << std::endl;
 	std::cout << "Author of More Effective C++ is: " << authorName << std::endl;
+	int data = callWithMax(1, 2);
+	std::cout << "data: " << data << std::endl;
 	return 0;
 }

@@ -1,0 +1,1 @@
+STL是所谓的标准模版库（Standard Template Library），是C++标准库程序库的一部分，致力于容器（如vector，list，set，map等等）、迭代器（入vector<int>::iterator, set<string>::iterator等等）、算法（入for_each，find，sort等等）及相关机制。许多相关机能以函数对象实现（function object）实现，那是行为像函数的对象。这样的对象来自于重载operato()（function call操作符）的classes。

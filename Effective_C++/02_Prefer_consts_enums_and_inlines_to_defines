@@ -1,0 +1,6 @@
+条款02: 尽量以const，enum，inline替换#define
+        Prefer consts,enums,and inlines to #defines.
+
+    这个条款或许改为“宁可编译器替换预处理器”比较好，因为或许#define不被视为语言的一部分。那正是它的问题所在。当你做这样的事情：
+    #define ASPECT_RATIO 1.635
+    记号名称ASPECT_RATIO也许从未被编译器看见；也许在编译器开始处理源代码之间它就被与处理器移走了。于是记号名称ASPECT_RATIO有可能没有进入符号表（symbol table）内。于是当你运用此常量但补货一个编译错误信息时，可能会带来困惑，因为这个错误信息也许活提到1.635而不是ASPECT_RATIO。如果ASPECT_RATIO被定义在一个非你所写的头文件内，你肯定对1.635以及它来自何处毫无概念，于是你将因为追踪它而浪费时间。这个问题也可能出现在记号式调试器（symbolic debugger）中，原因相同：你所使用的名称可能并未进入符号表（symbol table）。 
